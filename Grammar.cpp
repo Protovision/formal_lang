@@ -46,8 +46,8 @@ Grammar::symbol_set Grammar::first(const symbol_sequence& seq) const
 				symbol_set sub_first_set;
 				bool sub_first_set_had_empty_string;
 
-				/* Skip if body symbol is the same as the original symbol */
-				if (*it == sym) continue;
+				/* Break if body symbol is the same as the original symbol */
+				if (*it == sym) break;
 
 				/* Add the FIRST set of the body symbol (excluding empty
 				 * strings) to the result
