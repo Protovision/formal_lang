@@ -101,9 +101,6 @@ Grammar::symbol_set Grammar::follow(const symbol& nt) const
 		symbol_set first_of_after;
 		bool first_of_after_had_empty_string;
 
-		/* Skip any production that contains the non-terminal in it's head */
-		if (r.first == nt) continue;
-
 		/* Skip any production that does not contain the non-terminal in it's
 		 * body
 		 */
